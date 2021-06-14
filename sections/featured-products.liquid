@@ -19,17 +19,11 @@
                         <div class="featured-product__btn-box">
                             <button type="submit" value="Add to cart" class="featured-product__btn" >Add to cart</button> 
                         </div>
-                    </form>
-                                 
+                    </form>              
                </a>
-            
-        {% endfor %}
-        
-        
+        {% endfor %}  
     </div>
 </section>
-
-
 
 {% schema %}
 
@@ -87,11 +81,23 @@
     padding:5px
 }
 .featured-product__btn{
+    position:relative;
     width:100%;
     background-color: #886CFE;
     color: white;
     border: 5px solid;
     border-color: #886CFE;
+    border-radius: 0 0 15px 0;
+}
+.featured-product__btn:before{
+    content: "";
+    position: absolute;
+    bottom:-5px;
+    right:-5px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(to top left,transparent 50%, rgb(108,86,203) 0 );
+    z-index:1000;
 }
 .featured-product__btn:hover{
     background-color: white;
